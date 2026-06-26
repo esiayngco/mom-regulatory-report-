@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EHM Regulatory Survey Findings — Evergreen Health Monroe</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Evergreen Health Monroe · Regulatory Compliance</p>
+      <h1 class="hero-title">Four Years of<br>Survey Findings</h1>
+      <p class="hero-subtitle">
+        A data-driven look at what DNV and DOH surveys revealed at Evergreen Health Monroe
+        between 2023 and 2026 — which departments carry the greatest compliance burden,
+        which issues keep returning, and where focused improvement is needed most.
+      </p>
+      <div class="hero-meta">
+        <span>2023 – 2026</span>
+        <span class="dot">·</span>
+        <span>57 Findings</span>
+        <span class="dot">·</span>
+        <span>DNV · DOH</span>
+        <span class="dot">·</span>
+        <span>Evergreen Health Monroe</span>
+      </div>
+      <a class="hero-cta" href="#overview">Begin the Story ↓</a>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════
+       ACTIVE FILTER BANNER
+  ════════════════════════════════════════════════════ -->
+  <div id="filter-bar" class="filter-bar hidden">
+    <span id="filter-label">Filtered by: <strong id="filter-text"></strong></span>
+    <button id="clear-filter">✕ Clear filter</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 1 · OVERVIEW KPIs
+  ════════════════════════════════════════════════════ -->
+  <section id="overview" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>The Scope at a Glance</h2>
+      </div>
+      <p class="section-prose">
+        From 2023 through 2026, Evergreen Health Monroe accumulated
+        <strong>57 documented findings</strong> across DNV accreditation and DOH state surveys.
+        DNV surveys occur on a rolling cycle and focus on clinical governance, life safety,
+        and operational systems. DOH surveys tend to be complaint-driven or focused and
+        produced a cluster of findings in 2024.
+      </p>
+      <div id="kpi-grid" class="kpi-grid">
+        <!-- KPI cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 2 · FINDINGS OVER TIME
+  ════════════════════════════════════════════════════ -->
+  <section id="over-time" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Findings Over Time</h2>
+      </div>
+      <p class="section-prose">
+        2024 stands out as the most active survey year, driven by a detailed DOH review
+        that concentrated heavily on Plant Operations and nursing practice. DNV findings
+        appear in every year, reflecting continuous accreditation oversight.
+        Click any bar to filter every visualization below to that year.
+      </p>
+      <div id="chart-time" class="chart-container"></div>
+      <p class="chart-interpretation">
+        <strong>Insight:</strong> The 2024 DOH survey alone contributed 21 findings —
+        nearly 37% of all findings in this period — making it the single most consequential
+        review for EHM in recent years.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 3 · DNV vs DOH
+  ════════════════════════════════════════════════════ -->
+  <section id="bodies" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>DNV vs. DOH — Different Lenses</h2>
+      </div>
+      <p class="section-prose">
+        DNV and DOH approach hospital oversight very differently.
+        DNV's accreditation model emphasizes systems-based compliance — fire safety,
+        medical staff credentials, and operational documentation.
+        DOH surveys are more likely to flag patient safety events and procedural failures
+        at the point of care. Click either bar to filter all charts below.
+      </p>
+      <div id="chart-bodies" class="chart-container"></div>
+      <p class="chart-interpretation">
+        <strong>Insight:</strong> DNV accounts for 63% of all findings (36 of 57), largely
+        due to its continuous annual survey cycle. DOH's 21 findings in this window
+        were concentrated in a single 2024 survey visit with a broad scope.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 4 · DEPARTMENTS
+  ════════════════════════════════════════════════════ -->
+  <section id="departments" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Which Departments Are Most Cited?</h2>
+      </div>
+      <p class="section-prose">
+        Plant Operations dominates by a wide margin — a pattern consistent across both DNV
+        and DOH surveys. Nursing is the second most frequently cited area.
+        Click any bar to drill into that department's findings in the table below.
+      </p>
+      <div class="chart-controls">
+        <button class="btn-sort active" data-sort="count">Sort by Count</button>
+        <button class="btn-sort" data-sort="name">Sort by Name</button>
+      </div>
+      <div id="chart-depts" class="chart-container"></div>
+      <p class="chart-interpretation">
+        <strong>Insight:</strong> Plant Operations alone accounts for 51% of all EHM findings
+        in this period. Fire safety, compressed gas management, and physical environment
+        documentation are recurring weak points within that department.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 5 · REPEAT FINDINGS
+  ════════════════════════════════════════════════════ -->
+  <section id="repeat" class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>Patterns That Keep Returning</h2>
+      </div>
+      <p class="section-prose">
+        The most actionable signal in any compliance dataset is recurrence — findings that
+        appear across multiple survey years or multiple surveyors. The clusters below group
+        EHM's findings by compliance theme. Search to filter, or sort by frequency.
+      </p>
+      <div class="chart-controls repeat-controls">
+        <input id="repeat-search" class="search-input" type="text" placeholder="Search themes…" />
+        <button class="btn-sort active" data-rsort="count">Most Common</button>
+        <button class="btn-sort" data-rsort="alpha">Alphabetical</button>
+      </div>
+      <div id="chart-repeat" class="chart-container repeat-container"></div>
+      <p class="chart-interpretation">
+        <strong>Insight:</strong> Fire &amp; life safety is the single most recurring theme
+        at EHM, spanning both DNV and DOH surveys across every year in this period.
+        Documentation failures and staffing/training gaps are the next most persistent issues.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       SECTION 6 · INTERACTIVE TABLE
+  ════════════════════════════════════════════════════ -->
+  <section id="table-section" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>Explore Every Finding</h2>
+      </div>
+      <p class="section-prose">
+        Search, sort, and filter the complete EHM dataset. All chart interactions above
+        propagate here automatically — click any chart element to pre-filter the table.
+      </p>
+      <div class="table-controls">
+        <input id="table-search" class="search-input" type="text" placeholder="Keyword search…" />
+        <select id="filter-body">
+          <option value="">All Bodies</option>
+          <option value="DNV">DNV</option>
+          <option value="DOH">DOH</option>
+        </select>
+        <select id="filter-dept"><option value="">All Departments</option></select>
+        <select id="filter-year"><option value="">All Years</option></select>
+        <span id="table-count" class="table-count"></span>
+      </div>
+      <div class="table-wrapper">
+        <table id="main-table">
+          <thead>
+            <tr>
+              <th data-col="year" class="sortable">Year <span class="sort-icon">↕</span></th>
+              <th data-col="body" class="sortable">Body <span class="sort-icon">↕</span></th>
+              <th data-col="department" class="sortable">Department <span class="sort-icon">↕</span></th>
+              <th data-col="description">Description</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+      <div id="table-pagination" class="pagination"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Evergreen Health Monroe · Regulatory Survey Data Story</p>
+      <p class="footer-note">University of Washington B DATA 497 · DNV &amp; DOH Findings 2023–2026 · Built with D3.js v7</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
